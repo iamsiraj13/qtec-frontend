@@ -9,7 +9,6 @@ function ProductDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { addToCart } = useContext(CartContext);
-  console.log(id);
 
   useEffect(() => {
     setLoading(true);
