@@ -11,7 +11,7 @@ function CartSidebar({ setShowCart, setShowCheckout, className }) {
 
   return (
     <div
-      className={`fixed right-0 top-0 h-full w-[450px]  shadow-xl border-l-2 border-gray-200 p-6 z-50   ${className}`}
+      className={`fixed right-0 top-0 h-full w-full max-w-[450px]  shadow-xl border-l-2 border-gray-200 p-6 z-50   ${className}`}
     >
       <div className="flex justify-between items-center">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Cart</h2>
