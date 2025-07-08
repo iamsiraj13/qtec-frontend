@@ -21,9 +21,9 @@ This is the frontend application for the E-Shop project, built with React using 
 1. Navigate to the `client` directory:
    ```bash
    cd client
-   ```
    npm install
    npm run dev
+   ```
 
 Features
 
@@ -33,20 +33,6 @@ Features
 - Checkout modal with form validation.
 - Real-time cart updates with error handling.
 - Styled with Tailwind CSS and React Icons.
-
-client/
-src/
-assets/ # Static files (e.g., logos)
-components/ # Components
-common/ # Reusable components
-pages/ # Page components (HomePage, ProductDetailPage)
-features/ # Feature components (CartSidebar, CheckoutModal)
-context/ # Context API (CartContext)
-styles/ # Global styles (tailwind.css)
-App.jsx
-main.jsx # Vite entry point
-public/ # Public assets
-index.html
 
 Dependencies
 

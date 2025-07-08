@@ -9,14 +9,14 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/cart")
+      .get("https://qtec-backend-ten.vercel.app/api/cart")
       .then((response) => setCart(response.data))
       .catch((error) => console.error("Error fetching cart:", error));
   }, []);
 
   const addToCart = (product) => {
     axios
-      .post("http://localhost:5000/api/cart", product)
+      .post("https://qtec-backend-ten.vercel.app/api/cart", product)
       .then((response) => setCart(response.data))
       .catch((error) => console.error("Error adding to cart:", error));
   };
@@ -24,7 +24,7 @@ export const CartProvider = ({ children }) => {
   const updateQuantity = (id, quantity) => {
     if (quantity >= 1) {
       axios
-        .put(`http://localhost:5000/api/cart/${id}`, { quantity })
+        .put(`https://qtec-backend-ten.vercel.app/api/cart/${id}`, { quantity })
         .then((response) => setCart(response.data))
         .catch((error) => console.error("Error updating cart:", error));
     }
@@ -32,13 +32,13 @@ export const CartProvider = ({ children }) => {
 
   const removeFromCart = (id) => {
     axios
-      .delete(`http://localhost:5000/api/cart/${id}`)
+      .delete(`https://qtec-backend-ten.vercel.app/api/cart/${id}`)
       .then((response) => setCart(response.data))
       .catch((error) => console.error("Error removing from cart:", error));
   };
   const clearCart = () => {
     axios
-      .delete("http://localhost:5000/api/cart")
+      .delete("https://qtec-backend-ten.vercel.app/api/cart")
       .then(() => setCart([]))
       .catch((error) => console.error("Error clearing cart:", error));
   };

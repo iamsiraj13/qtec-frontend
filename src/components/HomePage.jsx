@@ -11,7 +11,7 @@ function HomePage() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://qtec-backend-ten.vercel.app/api/products")
       .then((response) => {
         setProducts(response.data);
         setLoading(false);
@@ -39,8 +39,8 @@ function HomePage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
         {products.map((product) => (
           <Link
-            to={`/product/${product.id}`}
-            key={product.id}
+            to={`/product/${product._id}`}
+            key={product._id}
             className="border-0 bg-gradient-to-br from-yellow-50 to-gray-100 rounded-xl p-4 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden"
           >
             <div className="p-2">

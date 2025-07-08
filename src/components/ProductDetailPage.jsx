@@ -9,11 +9,12 @@ function ProductDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { addToCart } = useContext(CartContext);
+  console.log(id);
 
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5000/api/products/${id}`)
+      .get(`https://qtec-backend-ten.vercel.app/api/product/${id}`)
       .then((response) => {
         setProduct(response.data);
         setLoading(false);
